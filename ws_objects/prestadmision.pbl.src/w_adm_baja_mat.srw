@@ -82,8 +82,8 @@ end if
 end event
 
 type cb_3 from commandbutton within w_adm_baja_mat
-integer x = 613
-integer y = 1112
+integer x = 649
+integer y = 1048
 integer width = 402
 integer height = 112
 integer taborder = 40
@@ -93,7 +93,7 @@ fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Arial"
-string text = "Fos"
+string text = "alex"
 end type
 
 type dw_baja_mat from datawindow within w_adm_baja_mat
