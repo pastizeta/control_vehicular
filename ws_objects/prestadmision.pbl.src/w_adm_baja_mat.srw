@@ -3,6 +3,8 @@ $PBExportComments$Ventana utilizada para capturar la baja del material
 forward
 global type w_adm_baja_mat from window
 end type
+type cb_3 from commandbutton within w_adm_baja_mat
+end type
 type dw_baja_mat from datawindow within w_adm_baja_mat
 end type
 type cb_2 from commandbutton within w_adm_baja_mat
@@ -18,6 +20,7 @@ boolean titlebar = true
 string title = "Detalle baja material"
 boolean controlmenu = true
 long backcolor = 29534863
+cb_3 cb_3
 dw_baja_mat dw_baja_mat
 cb_2 cb_2
 cb_1 cb_1
@@ -25,15 +28,18 @@ end type
 global w_adm_baja_mat w_adm_baja_mat
 
 on w_adm_baja_mat.create
+this.cb_3=create cb_3
 this.dw_baja_mat=create dw_baja_mat
 this.cb_2=create cb_2
 this.cb_1=create cb_1
-this.Control[]={this.dw_baja_mat,&
+this.Control[]={this.cb_3,&
+this.dw_baja_mat,&
 this.cb_2,&
 this.cb_1}
 end on
 
 on w_adm_baja_mat.destroy
+destroy(this.cb_3)
 destroy(this.dw_baja_mat)
 destroy(this.cb_2)
 destroy(this.cb_1)
@@ -74,6 +80,21 @@ else
 	
 end if
 end event
+
+type cb_3 from commandbutton within w_adm_baja_mat
+integer x = 649
+integer y = 1048
+integer width = 402
+integer height = 112
+integer taborder = 40
+integer textsize = -10
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Arial"
+string text = "alex"
+end type
 
 type dw_baja_mat from datawindow within w_adm_baja_mat
 integer x = 37
