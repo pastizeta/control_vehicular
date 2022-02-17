@@ -226,6 +226,7 @@ end type
 
 event clicked;long ll_nva_linea
 dw_inv.setfocus()		
+// AMV 17/02/2022
 if dw_inv.accepttext()=1 then
 	ll_nva_linea=dw_inv.insertrow(0)
 	dw_inv.setcolumn(1)
